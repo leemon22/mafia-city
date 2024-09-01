@@ -20,6 +20,9 @@ retos = [r for r in Path("retos.txt").read_text().split("\n") if r.strip()]
 random.shuffle(retos)
 print("Se han establecido los retos")
 
+# Comprobamos si el directorio 'resultados' existe, y si no, lo creamos
+Path("resultados").mkdir(exist_ok=True)
+
 # Asignamos el reto que tienen que hacer al siguiente participante en la lista circular a cada uno de los participantes
 
 num_participantes = len(participantes)
